@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="menuIcon" href="./images/symbol.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<style>
+    body{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+</style>
+<body class="overflow-x-hidden">
+
+    <section class="bg-gray-500 text-center p-3 w-fit justify-between flex items-center text-white text-sm md:text-base" id="promo">
+        <h1 class="flex-grow">Sign up and get your 20% off</h1>
+        <p class="cursor-pointer hover:font-bold" id="close">X</p>
+    </section>
+    
+    <!--navbar-->
+    <nav class="flex justify-between shadow-lg items-center sticky top-0 z-10 bg-white">
+        <h1 class="text-2xl md:text-3xl font-bold p-3">Nostra</h1>
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer mr-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <!-- Mobile menu -->
+        <div class="absolute top-full left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300 md:hidden hidden" id="sidenav">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="index.html" class="block py-2 hover:underline">Home</a></li>
+                <li><a href="#new-arrival" class="block py-2 hover:underline nav-link">New arrival</a></li>
+                <li><a href="#most-wanted" class="block py-2 hover:underline nav-link">Most Wanted</a></li>
+                <li><a href="./collections.html" class="block py-2 hover:underline">Collections</a></li>
+                <li><a href="" class="block py-2 hover:underline">Contact us</a></li>
+            </ul>
+        </div>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-4 lg:space-x-10 p-3 sticky top-0 z-30">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="#new-arrival" class="hover:underline nav-link">New arrival</a></li>
+            <li><a href="#most-wanted" class="hover:underline nav-link">Most Wanted</a></li>
+            <li><a href="collections.html" class="hover:underline">Collections</a></li>
+            <li><a href="" class="hover:underline">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="flex gap-[20px]">
+        <div class="h-full w-52 md:w-80">
+            <div class="border-r-4 border-solid border-black h-full">
+                <div class="m-2 md:mt-10"> 
+                    <h1 class="font-bold md:text-4xl">Occasion</h1>
+                    <div class="m-2 md:text-3xl md:mt-5">
+                        <input type="checkbox" class="filter-checkbox" data-filter="beach"> Beach <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="party"> Party <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="summer"> Summer <br>
+                    </div>
+                </div>
+                <div class="m-2 md:mt-10">
+                    <h1 class="font-bold md:text-4xl">Colors</h1>
+                    <div class="m-2 md:text-3xl md:mt-5">
+                        <input type="checkbox" class="filter-checkbox" data-filter="white"> White <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="blue"> Blue <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="green"> Green <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="red"> Red <br> 
+                    </div>
+                </div>
+                <div class="m-2 md:mt-10">
+                    <h1 class="font-bold md:text-3xl">Arrivals</h1>
+                    <div class="m-2 md:text-3xl md:mt-5">
+                        <input type="checkbox" class="filter-checkbox" data-filter="new"> New <br>
+                        <input type="checkbox" class="filter-checkbox" data-filter="old"> Old <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-auto w-full mt-10">
+            <div class="ml-10">
+                <input type="text" class="w-80 border border-solid border-black rounded-xl md:mt-10 p-2" style="width: 80%;" placeholder="Search for product" id="search">
+            </div>
+            <div class="grid grid-cols-3 mt-5 ml-5 gap-2" id="container">
+               <div class="product-card" data-beach data-green data-new>
+                <img src="./images/summer.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Summer Green</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-party data-red data-new>
+                <img src="./images/party.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Party Floral</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-summer data-white data-old>
+                <img src="./images/flo.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Floral Summer Shirt</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-beach data-blue data-new>
+                <img src="./images/bea.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Beach Floral Shirt</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-party data-red data-new>
+                <img src="./images/ree.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Shirt Party Red</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-summer data-green data-old>
+                <img src="./images/n1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Floral Summer Shirt</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-party data-white data-old>
+                <img src="./images/parrrr.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Party Floral Shirt</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-party data-red data-new>
+                <img src="./images/reeeeem.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold mt-1 md:text-2xl text-xs">Shirt Party Red</h1>
+                <p>$20</p>
+               </div>
+               <div class="product-card" data-summer data-green data-old>
+                <img src="./images/n1.jpg" alt="" class="inline hover:shadow-xl transform hover:-translate-y-2 md:h-80 md:w-80">
+                <h1 class="font-bold text-xs mt-1 md:text-2xl">Floral Summer Shirt</h1>
+                <p>$20</p>
+               </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-10">
+        <h1 class="text-2xl md:text-3xl font-bold">Join Our News Letter</h1>
+        <p class="text-sm md:text-3xl">Sign up for email newspaper to get exclusive discount and more</p>
+        <input type="text" class="border border-black m-4 p-2 border-solid" style="width: 80%; border: solid 3px;"> <br>
+        <button class="bg-black text-white p-3 rounded-lg md:w-20">Submit</button>
+    </div>
+
+    <footer class="bg-gray-800 p-4 mt-3">
+        <h1 class="text-xl text-white font-bold md:text-4xl m-6">Nostra</h1>
+        <p class="text-white m-6">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interest</p>
+        <p class="text-white m-6">@2021 nostra.com</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // DOM elements
+        const search = document.getElementById("search");
+        const container = document.getElementById("container");
+        const productCards = Array.from(document.querySelectorAll(".product-card"));
+        const checkboxes = Array.from(document.querySelectorAll(".filter-checkbox"));
+        const closeBtn = document.getElementById("close");
+        const menuIcon = document.getElementById("menuicon");
+        const sideNav = document.getElementById("sidenav");
+
+        // Active filters
+        let activeFilters = {
+            occasion: [],
+            color: [],
+            arrival: []
+        };
+
+        // Debounce function
+        function debounce(func, timeout = 300){
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => { func.apply(this, args); }, timeout);
+            };
+        }
+
+        // Filter products based on search and checkboxes
+        function filterProducts() {
+            const searchTerm = search.value.toUpperCase();
+            
+            productCards.forEach(card => {
+                const matchesSearch = searchTerm === '' || 
+                    card.textContent.toUpperCase().includes(searchTerm);
+                
+                const matchesFilters = 
+                    (activeFilters.occasion.length === 0 || activeFilters.occasion.some(f => card.hasAttribute(`data-${f}`))) &&
+                    (activeFilters.color.length === 0 || activeFilters.color.some(f => card.hasAttribute(`data-${f}`))) &&
+                    (activeFilters.arrival.length === 0 || activeFilters.arrival.some(f => card.hasAttribute(`data-${f}`)));
+                
+                if (matchesSearch && matchesFilters) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Handle checkbox changes
+        function handleCheckboxChange(e) {
+            const filterType = e.target.parentElement.previousElementSibling.textContent.toLowerCase();
+            const filterValue = e.target.dataset.filter;
+            
+            if (e.target.checked) {
+                if (filterType.includes('occasion')) {
+                    activeFilters.occasion.push(filterValue);
+                } else if (filterType.includes('color')) {
+                    activeFilters.color.push(filterValue);
+                } else if (filterType.includes('arrival')) {
+                    activeFilters.arrival.push(filterValue);
+                }
+            } else {
+                if (filterType.includes('occasion')) {
+                    activeFilters.occasion = activeFilters.occasion.filter(f => f !== filterValue);
+                } else if (filterType.includes('color')) {
+                    activeFilters.color = activeFilters.color.filter(f => f !== filterValue);
+                } else if (filterType.includes('arrival')) {
+                    activeFilters.arrival = activeFilters.arrival.filter(f => f !== filterValue);
+                }
+            }
+            
+            filterProducts();
+        }
+
+        // Event listeners
+        search.addEventListener("keyup", debounce(filterProducts));
+        
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", handleCheckboxChange);
+        });
+
+        // Close promo banner
+        closeBtn.addEventListener('click', function() {
+            document.getElementById('promo').style.display = 'none';
+        });
+
+        // Mobile menu toggle
+        menuIcon.addEventListener('click', function() {
+            sideNav.classList.toggle('hidden');
+        });
+    });
+    </script>
+</body>
+</html>
